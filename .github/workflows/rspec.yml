@@ -39,4 +39,4 @@ jobs:
         with:
           recreate: true
           path: code-coverage-results.md
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.COVERAGE_TOKEN }}

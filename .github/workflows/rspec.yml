@@ -20,5 +20,5 @@ jobs:
       - name: Simplecov Report
         uses: aki77/simplecov-report-action@v1
         with:
-          token: ${{ secrets.COVERAGE_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           failedThreshold: 90

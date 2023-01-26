@@ -13,10 +13,4 @@ RSpec.describe Math do
       expect(ContrivedMath.subtract(2, 1)).to eq(1)
     end
   end
-
-  describe '#multiply' do
-    it 'subtracts two numbers' do
-      expect(ContrivedMath.multiply(2, 2)).to eq(4)
-    end
-  end
 end

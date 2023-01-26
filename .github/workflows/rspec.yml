@@ -22,3 +22,5 @@ jobs:
         with:
           token: ${{ secrets.COVERAGE_TOKEN }}
           failedThreshold: 90
+      - name: Coverage Badge
+          uses: tj-actions/coverage-badge-py@v1.8

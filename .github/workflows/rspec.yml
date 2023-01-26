@@ -25,4 +25,4 @@ jobs:
       - name: Code Coverage Summary Report
         uses: irongut/CodeCoverageSummary@v1.3.0
         with:
-          filename: /home/runner/work/ruby-simplecov/ruby-simplecov/coverage/coverage.xml
+          filename: coverage/coverage.xml

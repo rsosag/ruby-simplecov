@@ -21,7 +21,7 @@ jobs:
         uses: aki77/simplecov-report-action@v1
         with:
           token: ${{ secrets.COVERAGE_TOKEN }}
-          failedThreshold: 85
+          failedThreshold: 90
 #      - name: Add code coverage comment
 #        uses: romeovs/lcov-reporter-action@v0.2.16
 #        with:

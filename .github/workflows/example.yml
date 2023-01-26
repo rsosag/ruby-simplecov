@@ -1,0 +1,52 @@
+name: Example
+
+# Run on PR events (create, update) and can re-run manually
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_call:
+
+jobs:
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    services:
+      mongodb:
+        image: mongo:4.2.21
+        ports:
+          - 27017:27017
+
+    env:
+      RAILS_ENV: test
+      COVERAGE: true
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.7
+          # runs 'bundle install' and caches installed gems automatically
+          bundler-cache: true
+
+      - name: Run specs (parallel)
+        run: bundle exec rake parallel:spec
+
+      - name: Run rubocop
+        run: bundle exec rubocop
+
+      - name: Set up node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.16.0'
+          cache: 'yarn'
+
+      - run: yarn install
+
+      - run: yarn test

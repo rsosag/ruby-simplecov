@@ -1,0 +1,16 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/ryuk/apps/ruby-simplecov/lib/contrived_math.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1674753507
+  }
+}

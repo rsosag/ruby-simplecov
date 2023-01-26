@@ -25,4 +25,4 @@ jobs:
     # Minimum configuration
       - uses: joshmfrankel/simplecov-check-action@main
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.COVERAGE_TOKEN }}

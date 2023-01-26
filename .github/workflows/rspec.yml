@@ -22,8 +22,3 @@ jobs:
         with:
           token: ${{ secrets.COVERAGE_TOKEN }}
           failedThreshold: 90
-#      - name: Add code coverage comment
-#        uses: romeovs/lcov-reporter-action@v0.2.16
-#        with:
-#          lcov-file: ./coverage/lcov/ruby-simplecov.lcov
-#          github-token: ${{ secrets.COVERAGE_TOKEN }}

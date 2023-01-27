@@ -46,7 +46,7 @@ jobs:
         with:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: f0e2360d71133a52b9836b203fa357d4
-          filename: coverage/.last_run.json
+          filename: coverage/coverage.json
           label: The Answer
           message: Coverage
           valColorRange: 91.64

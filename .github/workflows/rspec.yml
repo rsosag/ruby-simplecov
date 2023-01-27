@@ -42,7 +42,7 @@ jobs:
           path: code-coverage-results.md
           GITHUB_TOKEN: ${{ secrets.COVERAGE_TOKEN }}
       - name: Create the Badge
-        uses: schneegans/dynamic-badges-action@v1.0.0
+        uses: schneegans/dynamic-badges-action@v1.6.0
         with:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: f0e2360d71133a52b9836b203fa357d4

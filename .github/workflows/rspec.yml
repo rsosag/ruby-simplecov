@@ -47,7 +47,8 @@ jobs:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: f0e2360d71133a52b9836b203fa357d4
           filename: coverage/.last_run.json
-          label: Test Coverage
-          message: ${{ env.COVERAGE }}
-          color: green
-          namedLogo: jest
+          label: The Answer
+          message: Coverage
+          valColorRange: 91.64
+          maxColorRange: 100
+          minColorRange: 0

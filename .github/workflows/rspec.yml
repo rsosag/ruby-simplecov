@@ -22,6 +22,12 @@ jobs:
 #        with:
 #          token: ${{ secrets.COVERAGE_TOKEN }}
 #          failedThreshold: 90
+      - name: Save coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: Coverage Report
+          path: coverage/
+          retention-days: 5
       - name: Code Coverage Summary Report
         uses: irongut/CodeCoverageSummary@v1.3.0
         with:

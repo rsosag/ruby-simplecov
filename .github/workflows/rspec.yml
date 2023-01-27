@@ -41,3 +41,13 @@ jobs:
           recreate: true
           path: code-coverage-results.md
           GITHUB_TOKEN: ${{ secrets.COVERAGE_TOKEN }}
+      - name: Create the Badge
+        uses: schneegans/dynamic-badges-action@v1.0.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: 7d4c25ef2e97e8de523ef7c1fee26e8e
+          filename: coverage/.last_run.json
+          label: Test Coverage
+          message: ${{ env.COVERAGE }}
+          color: green
+          namedLogo: jest

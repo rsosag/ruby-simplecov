@@ -1,0 +1,8 @@
+{
+  "name": "ruby-simplecov",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rsosag/ruby-simplecov.git",
+  "author": "Rosel Sosa González <rsosag8801@gmail.com>",
+  "license": "MIT"
+}
